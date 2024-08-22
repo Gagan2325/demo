@@ -15,7 +15,7 @@
             height: 100vh;
             background-color: #f0f0f0;
         }
-        
+
         .iframe-container {
             position: relative;
             width: 100%;
@@ -24,7 +24,7 @@
             /* 16:9 aspect ratio */
             margin: 0 auto;
         }
-        
+
         .iframe-container iframe {
             position: absolute;
             top: 0;
@@ -33,11 +33,15 @@
             height: 100%;
             border: 0;
         }
-        
+
         @media (max-width: 600px) {
+            body {
+                height: auto;
+                /* Allow body to expand with iframe */
+            }
             .iframe-container {
-                padding-top: 75%;
-                /* Adjust for different aspect ratios or screen sizes */
+                height: 100vh;
+                padding-top: 0;
             }
         }
     </style>
